@@ -1,0 +1,17 @@
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:87 61/eureka}
+  instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: gateway service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: 'true'
+          lower-case-service-id: 'true'
